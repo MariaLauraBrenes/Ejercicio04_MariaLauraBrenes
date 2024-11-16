@@ -9,7 +9,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProductoDao extends JpaRepository <Producto,Long> {
-    //Este query filtra por productos activos con existencias mayores a un número específico y los ordena por precio descendente
+    //Este query JPA filtra por productos activos con existencias mayores a un número específico y los ordena por precio descendente
 public List<Producto> findByActivoAndExistenciasGreaterThanOrderByPrecioDesc(boolean activo, int existenciasMin);  
 }
 
